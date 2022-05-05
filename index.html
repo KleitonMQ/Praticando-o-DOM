@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="imovel.js"></script>
+    <script src="programa.js"></script>
+    <title>Praticando DOM</title>
+</head>
+
+<body>
+    <h1>Cadastro de imóveis</h1>
+    <form name="formulario">
+
+        <label for="tipo">Tipo do imóvel: </label>
+        <select name="tipo" id="tipo">
+            <option value="selecione">Informe o tipo</option>
+            <option value="Casa">Casa</option>
+            <option value="Apartamento">Apartamento</option>
+        </select>
+
+        <br><br>
+
+        <label for="area">Informe a área em m²: </label>
+        <input type="number" min="0" name="area" id="area">
+
+        <br><br>
+
+        <label for="alugado">A residencia está alugada?</label>
+
+        <input type="radio" name="alugado" id="sim" value="sim">
+        <label for="sim">Sim</label>
+
+        <input type="radio" name="alugado" id="nao" value="nao">
+        <label for="nao">Não</label>
+        <br><br>
+
+        <button id="cadastrar" type="button" onclick="cadastrarImovel()">Cadastrar</button>
+
+    </form>
+
+    <div>
+        <h2>Lista dos imóveis</h2>
+
+        <ul id="imoveis-cadastrados">
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
